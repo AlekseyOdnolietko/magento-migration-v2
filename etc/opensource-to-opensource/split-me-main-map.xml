@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<map xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+     xs:noNamespaceSchemaLocation="urn:magento:module:Magento_DataMigrationTool:etc/map.xsd">
+    <source>
+        <document_rules>
+            <rename>
+                <document>migration_split_me_table</document>
+                <to>migration_split_me_table_main</to>
+            </rename>
+        </document_rules>
+        <field_rules>
+            <ignore>
+                <field>migration_split_me_table.account_id_split_1</field>
+            </ignore>
+            <ignore>
+                <field>migration_split_me_table.name_split_1</field>
+            </ignore>
+            <ignore>
+                <field>migration_split_me_table.age_split_1</field>
+            </ignore>
+            <ignore>
+                <field>migration_split_me_table.account_id_split_1</field>
+            </ignore>
+            <ignore>
+                <field>migration_split_me_table.name_split_1</field>
+            </ignore>
+            <ignore>
+                <field>migration_split_me_table.age_split_1</field>
+            </ignore>
+            <ignore>
+                <field>migration_split_me_table.is_new</field>
+            </ignore>
+            <ignore>
+                <field>migration_split_me_table.value</field>
+            </ignore>
+        </field_rules>
+    </source>
+    <destination>
+        <document_rules>
+            <ignore>
+                <document>migration_split_me_table_person</document>
+            </ignore>
+        </document_rules>
+        <field_rules/>
+    </destination>
+</map>

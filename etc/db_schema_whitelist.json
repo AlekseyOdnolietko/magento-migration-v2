@@ -1,0 +1,56 @@
+{
+    "migration_change_field_table": {
+        "column": {
+            "id": true,
+            "name_change_field_name_m2": true,
+            "lastname_change_field_type": true,
+            "modify_content": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "migration_change_my_name_table_m2": {
+        "column": {
+            "id": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "migration_combine_me_table": {
+        "column": {
+            "id": true,
+            "account_id": true,
+            "lastname_connect": true,
+            "age": true,
+            "is_new": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "migration_split_me_table_main": {
+        "column": {
+            "id": true,
+            "lastname_split_2": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "migration_split_me_table_person": {
+        "column": {
+            "id": true,
+            "main_table_id": true,
+            "account_id_split_1": true,
+            "name_split_1": true,
+            "age_split_1": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "MIGRATION_SPLIT_ME_TABLE_PERSON_MAIN_TABLE_ID": true,
+            "FK_507A8C46AF7ABBFAF1013387F6D8AF60": true
+        }
+    }
+}

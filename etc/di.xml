@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="Alod\Migration\Step\Custom\Split\Main\Helper" type="Alod\Migration\Step\Custom\Helper">
+        <arguments>
+            <argument name="sourceDocName" xsi:type="string">migration_split_me_table</argument>
+            <argument name="destinationDocName" xsi:type="string">migration_split_me_table_main</argument>
+            <argument name="mapConfigOption" xsi:type="string">split_me_main_map_file</argument>
+        </arguments>
+    </virtualType>
+    <type name="Alod\Migration\Step\Custom\Split\Main\Integrity">
+        <arguments>
+            <argument name="helper" xsi:type="object">Alod\Migration\Step\Custom\Split\Main\Helper</argument>
+        </arguments>
+    </type>
+    <type name="Alod\Migration\Step\Custom\Split\Main\Data">
+        <arguments>
+            <argument name="helper" xsi:type="object">Alod\Migration\Step\Custom\Split\Main\Helper</argument>
+        </arguments>
+    </type>
+    <type name="Alod\Migration\Step\Custom\Split\Main\Volume">
+        <arguments>
+            <argument name="helper" xsi:type="object">Alod\Migration\Step\Custom\Split\Main\Helper</argument>
+        </arguments>
+    </type>
+    <type name="Alod\Migration\Step\Custom\Split\Main\Delta">
+        <arguments>
+            <argument name="helper" xsi:type="object">Alod\Migration\Step\Custom\Split\Main\Helper</argument>
+            <argument name="data" xsi:type="object">Alod\Migration\Step\Custom\Split\Main\Data</argument>
+        </arguments>
+    </type>
+
+    <virtualType name="Alod\Migration\Step\Custom\Split\Person\Helper" type="Alod\Migration\Step\Custom\Helper">
+        <arguments>
+            <argument name="sourceDocName" xsi:type="string">migration_split_me_table</argument>
+            <argument name="destinationDocName" xsi:type="string">migration_split_me_table_person</argument>
+            <argument name="mapConfigOption" xsi:type="string">split_me_person_map_file</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Alod\Migration\Step\Custom\Split\Person\Integrity">
+        <arguments>
+            <argument name="helper" xsi:type="object">Alod\Migration\Step\Custom\Split\Person\Helper</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Alod\Migration\Step\Custom\Split\Person\Data">
+        <arguments>
+            <argument name="helper" xsi:type="object">Alod\Migration\Step\Custom\Split\Person\Helper</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Alod\Migration\Step\Custom\Split\Person\Volume">
+        <arguments>
+            <argument name="helper" xsi:type="object">Alod\Migration\Step\Custom\Split\Person\Helper</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Alod\Migration\Step\Custom\Split\Person\Delta">
+        <arguments>
+            <argument name="helper" xsi:type="object">Alod\Migration\Step\Custom\Split\Person\Helper</argument>
+            <argument name="data" xsi:type="object">Alod\Migration\Step\Custom\Split\Person\Data</argument>
+        </arguments>
+    </virtualType>
+
+    <virtualType name="Alod\Migration\Step\Custom\Combine\First\Helper" type="Alod\Migration\Step\Custom\Helper">
+        <arguments>
+            <argument name="sourceDocName" xsi:type="string">migration_connect_me_table_1</argument>
+            <argument name="destinationDocName" xsi:type="string">migration_combine_me_table</argument>
+            <argument name="mapConfigOption" xsi:type="string">combine_me_step_one_map_file</argument>
+        </arguments>
+    </virtualType>
+    <type name="Alod\Migration\Step\Custom\Combine\First\Integrity">
+        <arguments>
+            <argument name="helper" xsi:type="object">Alod\Migration\Step\Custom\Combine\First\Helper</argument>
+        </arguments>
+    </type>
+    <type name="Alod\Migration\Step\Custom\Combine\First\Data">
+        <arguments>
+            <argument name="helper" xsi:type="object">Alod\Migration\Step\Custom\Combine\First\Helper</argument>
+        </arguments>
+    </type>
+    <type name="Alod\Migration\Step\Custom\Combine\First\Volume">
+        <arguments>
+            <argument name="helper" xsi:type="object">Alod\Migration\Step\Custom\Combine\First\Helper</argument>
+        </arguments>
+    </type>
+    <type name="Alod\Migration\Step\Custom\Combine\First\Delta">
+        <arguments>
+            <argument name="helper" xsi:type="object">Alod\Migration\Step\Custom\Combine\First\Helper</argument>
+            <argument name="data" xsi:type="object">Alod\Migration\Step\Custom\Combine\First\Data</argument>
+        </arguments>
+    </type>
+
+    <virtualType name="Alod\Migration\Step\Custom\Combine\Second\Helper" type="Alod\Migration\Step\Custom\Helper">
+        <arguments>
+            <argument name="sourceDocName" xsi:type="string">migration_connect_me_table_2</argument>
+            <argument name="destinationDocName" xsi:type="string">migration_combine_me_table</argument>
+            <argument name="mapConfigOption" xsi:type="string">combine_me_step_two_map_file</argument>
+        </arguments>
+    </virtualType>
+    <type name="Alod\Migration\Step\Custom\Combine\Second\Integrity">
+        <arguments>
+            <argument name="helper" xsi:type="object">Alod\Migration\Step\Custom\Combine\Second\Helper</argument>
+        </arguments>
+    </type>
+    <type name="Alod\Migration\Step\Custom\Combine\Second\Data">
+        <arguments>
+            <argument name="helper" xsi:type="object">Alod\Migration\Step\Custom\Combine\Second\Helper</argument>
+        </arguments>
+    </type>
+    <type name="Alod\Migration\Step\Custom\Combine\Second\Volume">
+        <arguments>
+            <argument name="helper" xsi:type="object">Alod\Migration\Step\Custom\Combine\Second\Helper</argument>
+        </arguments>
+    </type>
+    <type name="Alod\Migration\Step\Custom\Combine\Second\Delta">
+        <arguments>
+            <argument name="helper" xsi:type="object">Alod\Migration\Step\Custom\Combine\Second\Helper</argument>
+            <argument name="data" xsi:type="object">Alod\Migration\Step\Custom\Combine\Second\Data</argument>
+        </arguments>
+    </type>
+</config>

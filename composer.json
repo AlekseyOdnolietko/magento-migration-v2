@@ -1,0 +1,25 @@
+{
+    "name": "funch88/magento-migration-v2",
+    "description": "Providing config for migration",
+    "config": {
+        "sort-packages": true
+    },
+    "require": {
+        "magento/framework": "*",
+        "magento/data-migration-tool": "*"
+    },
+    "type": "magento2-module",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Alod\\Migration\\": ""
+        }
+    },
+    "version": "2.0.0",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ]
+}
