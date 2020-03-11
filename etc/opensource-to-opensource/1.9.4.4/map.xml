@@ -510,9 +510,9 @@
             <ignore>
                 <document>migration_connect_me_table_2</document>
             </ignore>
-            <!--ignore>
+            <ignore>
                 <document>migration_split_me_table</document>
-            </ignore-->
+            </ignore>
             <rename>
                 <document>catalogsearch_query</document>
                 <to>search_query</to>
@@ -2531,12 +2531,12 @@
             <ignore>
                 <document>migration_combine_me_table</document>
             </ignore>
-            <!--ignore>
+            <ignore>
                 <document>migration_split_me_table_main</document>
-            </ignore-->
-            <!--ignore>
+            </ignore>
+            <ignore>
                 <document>migration_split_me_table_person</document>
-            </ignore-->
+            </ignore>
         </document_rules>
         <field_rules>
             <transform>

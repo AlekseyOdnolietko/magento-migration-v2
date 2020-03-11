@@ -9,11 +9,12 @@
    Repeat the same n Magento 2 Admin panel.
 4. Run the following command from M2 root dir:
 ```bash
-    composer require funch88/magento-migration
+    composer require funch88/magento-migration-v2
 ```
-5. Upgrade Magento:
+5. Module installation:
 ```bash
    php bin/magento setup:upgrade
+   php bin/magento setup:di:compile
 ```
 6. Update config.xml according to the credentials:
 ```xml
@@ -34,10 +35,11 @@
     </options>
 ```
 7. Import the sql dump and run migration_generate_data function
-8. Migrate settings and data
+8. Migrate settings, data and delta
 ```bash
-    php bin/magento migrate:settings vendor/funch88/magento-migration/etc/opensource-to-opensource/1.9.4.4/config.xml
-    php bin/magento migrate:data vendor/funch88/magento-migration/etc/opensource-to-opensource/1.9.4.4/config.xml
+    php bin/magento migrate:settings vendor/funch88/magento-migration-v2/etc/opensource-to-opensource/1.9.4.4/config.xml
+    php bin/magento migrate:data vendor/funch88/magento-migration-v2/etc/opensource-to-opensource/1.9.4.4/config.xml
+    php bin/magento migrate:delta vendor/funch88/magento-migration-v2/etc/opensource-to-opensource/1.9.4.4/config.xml
 ```
 9. Flush all Magento 2 cache types
 10. Reindex all Magento 2 indexes
